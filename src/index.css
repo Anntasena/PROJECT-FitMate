@@ -1,13 +1,197 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: aquamarine;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  REUSABLE COMPONENT */
+/* ------------------- */
+/* ------------------- */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  background-color: blue;
+}
+
+/*  COMPONENT */
+/* ----------- */
+/* ----------- */
+
+/* NAVBAR */
+.navbar {
+  height: 5rem;
+}
+
+/* LAYOUT */
+.mainapp-path {
+  display: grid;
+  min-height: 80vh;
+  grid-template-columns: 40rem 70rem;
+  margin: 2rem 0;
+  column-gap: 2.5rem;
+}
+
+.left-component,
+.right-component {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PROGRAM LIST */
+.program-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 1.2rem;
+  gap: 1.2rem;
+}
+
+.program {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+}
+
+.program-item {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: brown;
+}
+
+.program-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.program-name {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.program-date {
+  font-size: 1.1rem;
+}
+
+.duration {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-end;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.duration strong {
+  font-size: 1.6rem;
+}
+
+.button {
+  background-color: gold;
+  height: 5rem;
+  width: 95%;
+  align-items: center;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.2rem;
+}
+
+/* PROGRAM DETAILS */
+.program-details {
+  background-color: green;
+  height: 5rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.program-details-name {
+  font-size: 3.4rem;
+}
+
+.program-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-items: end;
+}
+
+.program-details-type,
+.program-details-date {
+  display: flex;
+  justify-content: end;
+  font-size: 1.6rem;
+}
+
+.program-details-type {
+  font-size: 2rem;
+}
+
+/* EXERCISE LIST */
+.exercise-layout {
+  height: 72%;
+  background-color: burlywood;
+  padding: 1rem;
+}
+
+.exercise-layout ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.exercise-items {
+  display: flex;
+  background-color: azure;
+  height: 5rem;
+  padding: 1rem;
+}
+
+/* EXERCISE PROGRESS */
+.exercise-progress {
+  display: flex;
+  margin: 1rem;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.progress-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cadetblue;
+  width: 95%;
+  height: 100%;
+
+  font-size: 2rem;
 }
